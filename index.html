@@ -2,7 +2,9 @@
 layout: layout.html
 ---
 {% for post in collections.post%}
-<h2><a href="{{post.url}}">{{post.data.title}}</h2></a>
+<h2 style="font-family:'Segoe UI', sans-serif;">
+    <a href="{{post.url}}" style="color:rgb(88, 45, 45); text-decoration: none;">{{post.data.title}}
+    </h2></a>
 <p>{{post.content}}</p>
 <p style="font-style: italic;">{{post.data.date}}</p>
 {% if not loop.last %}
