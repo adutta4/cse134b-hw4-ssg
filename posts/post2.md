@@ -1,4 +1,4 @@
 ---
 title: My second post
 ---
-adnkjfnkjdsnfkjdsnfkjnds
+This is a test for making new posts that render on my home page. 

@@ -3,10 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <title>Aditi's 11ty Blog</title>
+        <style>
+            html {
+                background-color: rgb(255, 246, 216);
+            }
+            h1 {
+                color: rgb(94, 24, 24);
+                text-align: center;
+            }
+        </style>
     </head>
     <body>
         <header>
-            <h1>{{ title | default: "Aditi's Blog" }}</h1>
+            <h1>{{ title | default: "Aditi's Blog" }}</h1><hr>
+                <!-- {% include "navbar.html" %} -->
         </header>
         <main>
             {{ content }}
