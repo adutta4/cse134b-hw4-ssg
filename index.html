@@ -1,11 +1,20 @@
 ---
 layout: layout.html
 ---
-{% for post in collections.post%}
+{% for post in collections.post reversed %}
 <h2 style="font-family:'Segoe UI', sans-serif;">
-    <a href="{{post.url}}" style="color:rgb(88, 45, 45); text-decoration: none;">{{post.data.title}}
+    <a href="{{post.url}}" style="color:rgb(88, 45, 45);">{{post.data.title}}
     </h2></a>
 <p>{{post.content}}</p>
+<ul style="list-style-type: none;">{% for category in post.data.categories %}
+    <li style="display: inline-block; 
+    margin-right: 1em;
+    font-size: 0.9em;
+    background-color: rgba(87, 39, 39, 0.384); 
+    border-radius: 1em;
+    padding: 0.4em;">{{ category }}</li>
+    {% endfor %}
+</ul>
 <p style="font-style: italic;">{{post.data.date}}</p>
 {% if not loop.last %}
         <hr>
